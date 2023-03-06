@@ -1,0 +1,12 @@
+
+<div id="something" ></div>
+
+<script>
+var con = new XMLHttpRequest();
+con.open( "GET", "http://localhost/jquery/jquery-ui-1.13.2/jquery-ui.min.js", true); // async
+con.onload = function(){
+  console.log( this.responseText );
+  document.getElementById("something").innerHTML = this.responseText;
+}
+con.send();
+</script>
